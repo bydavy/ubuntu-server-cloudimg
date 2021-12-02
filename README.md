@@ -1,1 +1,5 @@
-Create a cloudimage ready to be used in Proxmox
+# Ubuntu cloudimage for Proxmox
+
+This adds some packages to the cloudimage such as:
+
+- qemu-guest-agent
