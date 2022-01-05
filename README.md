@@ -10,11 +10,11 @@ This adds some packages to the cloudimage such as:
 2. Execute the following in proxmox:
 ```bash
 # Create VM
-qm create 9000 --memory 2048 -cores 1 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu21.10
+qm create 9000 --memory 2048 -cores 1 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu
 # Import image
 qm importdisk 9000 impish-server-cloudimg-amd64.img local-lvm
 # Set disk on VM
-qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-1
+qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-0
 # Set boot order
 qm set 9000 --boot c --bootdisk scsi0
 # Set serial
