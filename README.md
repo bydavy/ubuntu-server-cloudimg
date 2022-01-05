@@ -7,7 +7,7 @@ This adds some packages to the cloudimage such as:
 ## Import in Proxmox
 
 Push the img file to proxmox via SCP.
-```
+```bash
 # Create VM
 qm create 9000 --memory 2048 -cores 1 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu21.10
 # Import image
