@@ -30,5 +30,6 @@ qm set 9000 --sshkey ~/.ssh/id_rsa.pub
 qm set 9000 --ipconfig0 ip=192.168.1.100/24,gw=192.168.1.254
 # Increase disk space by 20GB
 qm resize 9000 scsi0 +20G
+# Create a template from this VM
 qm template 9000
 ```
