@@ -9,7 +9,7 @@ This adds some packages to the cloudimage such as:
 Push the img file to proxmox via SCP.
 ```
 # Create VM
-qm create 9000 --memory 2048 -cores 4 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu21.10
+qm create 9000 --memory 2048 -cores 1 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu21.10
 # Import image
 qm importdisk 9000 impish-server-cloudimg-amd64.img local-lvm
 # Set disk on VM
