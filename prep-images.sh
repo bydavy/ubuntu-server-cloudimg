@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UBUNTU_VERSIONS=${1:-"focal hirsute impish"}
+UBUNTU_VERSIONS=${1:-"focal hirsute impish jammy"}
 
 sudo apt-get update -qq < /dev/null > /dev/null
 sudo apt-get install -y -qq libguestfs-tools
