@@ -12,7 +12,7 @@ This adds some packages to the cloudimage such as:
 # Create VM
 qm create 9000 --memory 2048 -cores 1 -sockets 1 --net0 virtio,bridge=vmbr0 --name Ubuntu
 # Import image
-qm importdisk 9000 impish-server-cloudimg-amd64.img local-lvm
+qm importdisk 9000 jammy-server-cloudimg-amd64.img local-lvm
 # Set disk on VM
 qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-0
 # Set boot order
