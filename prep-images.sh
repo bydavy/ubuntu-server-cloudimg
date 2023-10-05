@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UBUNTU_VERSIONS=${1:-"focal hirsute impish jammy kinetic lunar"}
+UBUNTU_VERSIONS=${1:-"jammy kinetic lunar"}
 
 sudo apt-get update -qq < /dev/null > /dev/null
 sudo apt-get install -y -qq libguestfs-tools
