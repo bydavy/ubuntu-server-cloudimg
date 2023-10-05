@@ -14,22 +14,12 @@ jobs:
       - name: Prepare cloudimg 
         run: ./prep-images.sh 
       
-      - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create release and upload assets
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          tag_name: latest 
-          release_name: Latest
-          body: |
-            Ubuntu cloudimg for Proxmox
-          draft: false
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
           prerelease: false
-      
-      - name: Upload release asset
-        uses: csexton/release-asset-action@v2
-        with:
-          pattern: "out/*"
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          release-url: ${{ steps.create_release.outputs.upload_url }}
+          title: "Development Build"
+          files: |
+            out/*.img
