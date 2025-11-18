@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UBUNTU_VERSIONS=${1:-"24.04.3 25.10"}
+UBUNTU_VERSIONS=${1:-"noble plucky resolute"}
 
 sudo apt-get update -qq < /dev/null > /dev/null
 sudo apt-get install -y -qq libguestfs-tools
