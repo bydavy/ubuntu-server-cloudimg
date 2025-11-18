@@ -5,6 +5,9 @@ UBUNTU_VERSIONS=${1:-"noble plucky resolute"}
 sudo apt-get update -qq < /dev/null > /dev/null
 sudo apt-get install -y -qq libguestfs-tools
 
+export LIBGUESTFS_BACKEND=direct
+export LIBGUESTFS_BACKEND_SETTINGS=network=slirp
+
 OUT=out
 mkdir -p ${OUT}
 for UBUNTU in ${UBUNTU_VERSIONS}; do
